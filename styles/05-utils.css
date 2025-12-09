@@ -1,0 +1,82 @@
+/* Utilities: blur overlay and responsive rules */
+.blur{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    background-color: var(--blur-overlay);
+    transition: 0.2s;
+}
+
+
+@media (max-width: 768px) {
+    /* Header responsive layout */
+    .header-main .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 44px;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    /* Hide nav and search by default on mobile */
+    .main-nav {
+        display: none;
+        width: 100%;
+    }
+
+    /* When header has nav-open class, show nav as vertical menu */
+    .main-header.nav-open .main-nav {
+        display: block;
+        background: var(--white);
+        border-top: 1px solid var(--border-gray);
+        padding: 10px 0 20px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 20px;
+    }
+
+    .main-nav li {
+        margin: 6px 0;
+    }
+
+    .search-bar {
+        order: 3;
+        width: 100%;
+        padding: 0 20px 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .user-actions {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 20px 10px;
+        gap: 12px;
+    }
+
+    /* Footer and product adjustments already present */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-content{
+        grid-template-columns: 1fr;
+    }
+}

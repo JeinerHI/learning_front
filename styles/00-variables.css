@@ -1,0 +1,19 @@
+/* Variables: root color and shared tokens */
+:root {
+    --primary-color: rgb(223, 0, 0);
+    --accent-red: #e60012;
+    --accent-red-dark: #cc0000;
+    --black: #000;
+    --white: #fff;
+    --dark-charcoal: #111827;
+    --very-dark: #0a0f1a;
+    --dark-gray: #333;
+    --medium-gray: #555;
+    --light-gray: #ccc;
+    --lighter-gray: #ddd;
+    --background-light: #f7f7f7;
+    --border-gray: #eee;
+    --text-dark: #222;
+    --link-blue: #0071e3;
+    --blur-overlay: rgba(255, 0, 0, 0.194);
+}

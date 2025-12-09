@@ -1,0 +1,98 @@
+/* Header / Nav styles */
+.main-header { /* Global header */
+    background: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: var(--white);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-top {
+    background: var(--black);
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.user-actions, .contact-info {
+    display: flex;
+    gap: 10px;
+}
+
+.user-actions a:hover {
+    color: var(--accent-red);
+}
+
+.header-main {
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.header-main .logo {
+    width: 100%;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px 15px;
+    border: 1px solid var(--lighter-gray);
+    border-radius: 20px 0 0 20px;
+    width: 300px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 2% 3%;
+    background: var(--accent-red);
+    border: none;
+    color: var(--white);
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: var(--accent-red-dark);
+}
+
+/* Mobile toggle (hidden on desktop) */
+.mobile-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: var(--dark-gray);
+    cursor: pointer;
+    padding: 6px 10px;
+}

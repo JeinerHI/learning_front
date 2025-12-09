@@ -1,0 +1,16 @@
+/* Base / Reset styles */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+}
+
+a, i{
+    text-decoration: none;
+    color: var(--white);
+}
+
+li{
+    list-style: none;
+}

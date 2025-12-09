@@ -1,0 +1,88 @@
+/* Cart styles (moved from root cart.css) */
+.cart-view{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    height: 100vh;
+    width: 30vw;
+    background-color: var(--border-gray);
+    transition: 0.5s;
+    right: -40rem;
+    scroll-behavior: auto;
+}
+
+.active{
+    right: 0;
+}
+
+.cart-container{
+    color: black;
+    padding: 5%;
+}
+
+.cart-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+}
+
+.cart-area{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* position: fixed; */
+    height: 80%;
+    /* width: 50%; */
+    overflow-y: auto;
+}
+
+.cart-area li{
+    background-color: var(--background-light);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid var(--lighter-gray);
+    border-radius: 10px;
+    padding: 2% 10%;
+}
+
+.cart-area li img{
+    width: 10%;
+    place-self: left;
+}
+
+.cart-area .bloque,
+.cart-area div{
+    display: flex;
+    align-items: center;
+}
+
+.cart-area .bloque{
+    width: 100%;
+    height: 12vh;
+    gap: 5%;
+    justify-content: space-between;
+}
+
+.cart-block-handlers{
+    gap: 5%;
+}
+
+.cart-foot{
+    position: fixed;
+    bottom: 0;
+}
+
+.addedToCart{
+    background-color: var(--accent-red-dark);
+    transition-duration: 0.3s;
+    border: 0.5px solid rgba(128, 128, 128, 0.281);
+    transition: 0.5s;
+}
+
+.addedToCart:hover{
+    background-color: #cc000091;
+    box-shadow: 0.1px 0.1px 3px 0.1px;
+    transition: 0.5s;
+}

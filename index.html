@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/00-variables.css">
+    <link rel="stylesheet" href="styles/01-base.css">
+    <link rel="stylesheet" href="styles/02-header.css">
+    <link rel="stylesheet" href="styles/03-components.css">
+    <link rel="stylesheet" href="styles/04-footer.css">
+    <link rel="stylesheet" href="styles/05-utils.css">
+    <title>MediaMarkt - Tienda de Móviles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/06-cart.css">
+    <link rel="stylesheet" href="styles/07-product-detail-popup.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 900 100 200</span>
+                    <span><i class="fas fa-envelope"></i> ayuda@mediamarkt.es</span>
+                </div>
+                <div class="user-actions">
+                    <a href="#"><i class="fas fa-user"></i> Mi Cuenta</a>
+                    <a href="#"><i class="fas fa-heart"></i> Favoritos</a>
+                    <button onclick="displayCart()"><i style="color:black;" class="fas fa-shopping-cart cart"></i>Carrito(<span class="q-cart">0</span>)</button>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <img src="img/MM_logo_white.svg" alt="MediaMarkt Logo">
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Móviles</a></li>
+                        <li><a href="#">Tablets</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <input type="text" id="search" placeholder="Buscar productos...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="filters">
+            <button data-brand="All">All</button>
+            <button data-brand="iPhone">iPhone</button>
+            <button data-brand="Samsung">Samsung</button>
+            <button data-brand="Xiaomi">Xiaomi</button>
+            <button data-brand="Oppo">Oppo</button>
+            <button data-brand="Google">Google</button>
+            <button id="discounted">Discounted</button>
+            
+    </div>
+
+    <div class="product-container" id="product-container"></div>
+
+    <div class="product-detail-popup" id="productDetailPopup"></div>
+
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div id="capa"></div>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h3>Atención al Cliente</h3>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Envíos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Sobre MediaMarkt</h3>
+                <ul>
+                    <li><a href="#">Quiénes Somos</a></li>
+                    <li><a href="#">Trabaja con Nosotros</a></li>
+                    <li><a href="#">Tiendas</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Financiación</a></li>
+                    <li><a href="#">Tarjeta MediaMarkt Club</a></li>
+                    <li><a href="#">Garantía Extra</a></li>
+                    <li><a href="#">Instalación</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Suscríbete al Newsletter</h4>
+                    <form>
+                        <input type="email" placeholder="Tu email">
+                        <button type="submit">Suscribir</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 MediaMarkt. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Cookies</a>
+                </div>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/globalVars.js"></script>
+    <script src="js/renders&filters.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
