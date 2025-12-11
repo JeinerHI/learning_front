@@ -1,0 +1,150 @@
+
+
+/** ==== GENERALS ===== */
+/** ==== GENERALS ===== */
+/** ==== GENERALS ===== */
+
+
+
+.color--orange {
+    color: var(--color-orange);
+}
+
+.section--100 {
+    width: 100%;
+}
+
+.section--50 {
+    width: 40%;
+}
+
+.section--vertical--gap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex--centered{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.content--center{
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.flex--column{
+    display: flex;
+    flex-direction: column;
+}
+
+.section__three__container {
+    
+}
+
+.section__three__left__side{
+    height: 80%;
+    gap: 1rem;
+    margin: auto 0;
+}
+
+.section__three__right__side {
+    position: relative;
+}
+
+.section__three__video{
+    width: 150px;
+    position: relative;
+}
+
+.section__three__video img {
+    max-width: 300px;
+    max-height: 200px;
+    margin: 0 auto;
+}
+
+.blue__square{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: var(--light-blue);
+    border-radius: 20px;
+}
+
+.orange__square{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: var(--color-orange);
+    border-radius: 20px;
+}
+
+/** LAST SECTION */
+
+.section__news{
+    height: 1000vh;
+}
+
+.span__upper{
+    text-transform: uppercase;
+    background-color: var(--color-orange);
+    padding: 0.5rem;
+    width: fit-content;
+    border-radius: 25px;
+    font-size: 0.8rem;
+}
+
+.section__news__header{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section__news__left{
+
+    justify-content: space-between;
+}
+
+.section__news__right{
+    width: 50%;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.section__news__bloq{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section__news__bloq__img__container{
+    width: 30%;
+    position: relative;
+}
+
+.section__news__bloq img{
+    width: 100%;
+}
+
+.section__news__bloq__content{
+    width: 65%;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.section__news__bloq .span__upper{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
