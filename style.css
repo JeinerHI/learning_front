@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    place-self: center;
+    background-color: rgba(172, 255, 47, 0.404);
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+body{
+    width: 100%;
+}
+
+form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+input, button{
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+label{
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+}
+
+button{
+    margin-left: 1rem;
+}
+
+.lupa{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+section{
+    width: 100%;
+}
+
+.activar{
+    border: 2px solid;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-color: greenyellow;
+    border-radius: 25px;
+}
+
+#container{
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#container button{
+    padding: 0.5rem;
+}
