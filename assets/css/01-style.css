@@ -38,6 +38,9 @@
     --main-font: "Jost", sans-serif;
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --size-title-big: 2.8rem;
+    --size-title-small: 1.8rem;
+    --size-title-medium: 2.5vw;
 }
 
 h1, h2, h3, h4, h5, h6{

@@ -15,7 +15,7 @@
 
 #header_top h1{
     color: #5756a2;
-    font-size: 50px;
+    font-size: clamp(var(--size-title-small),var(--size-title-medium),var(--size-title-big));
     font-weight: 700;
     text-align: left;
 }
@@ -41,7 +41,7 @@
 }
 
 #progress_filler{
-    width: 50%;
+    width: 25%;
     height: 80%;
     position: absolute;
     border-radius: 20px;
@@ -53,7 +53,7 @@
 /** =============== BOTTOM ================ */
 
 #header_bottom{
-    padding: ;
+    /* padding: ;  */
 }
 
 #header_bottom_container{
