@@ -62,7 +62,20 @@ button {
 .feedback-body__message {
   margin-top: 10px;
 }
+
+.feedback-body input {
+  margin-bottom: 10px;
+}
+
 .feedback-body button {
   margin-top: 10px;
   align-self: flex-end;
+}
+
+.validado{
+  border: 1px solid greenyellow;
+}
+
+.noValidado{
+  border: 1px solid rgb(255, 113, 47);
 }
