@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    font-family: var(--main-font);
 }
 
 
@@ -26,7 +27,6 @@
 }
 
 #progress_label{
-    font-family: var(--main-font);
     font-size: 15px;
 }
 
@@ -55,18 +55,23 @@
 
 #header_bottom{
     padding: 5rem; 
-    width: 100%;
 }
 
 #header_bottom_container{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 
 .step{
-    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    font-size: 21px;
+    font-weight: 600;
+    color: rgba(108, 117, 125, 0.7);
 }
 
 .step_check{
