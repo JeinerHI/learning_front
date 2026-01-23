@@ -16,7 +16,7 @@
 }
 
 #header_top h1{
-    color: #5756a2;
+    color: var(--purple);
     font-size: clamp(var(--size-title-small),var(--size-title-medium),var(--size-title-big));
     font-weight: 700;
     text-align: left;
@@ -46,7 +46,7 @@
     height: 80%;
     position: absolute;
     border-radius: 20px;
-    background-color: #5756a2;
+    background-color: var(--purple);
 }
 
 
@@ -60,18 +60,19 @@
 #header_bottom_container{
     width: 100%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2%;
 }
 
 .step{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 5px;
+    gap: 15px;
     font-size: 21px;
     font-weight: 600;
-    color: rgba(108, 117, 125, 0.7);
+    color: var(--secondary);
 }
 
 .step_check{
@@ -79,4 +80,15 @@
     height: 50px;
     border: 2px solid #e3e3e3;
     border-radius: 50%;
+    display: grid;
+  place-items: center;
+}
+
+.guion{
+    /* border-top: 15px; */
+    width: 22px;
+    height: 3px;
+    background-color: var(--secondary);
+    border: 0.2px solid #e3e3e3;
+    align-self: center;
 }

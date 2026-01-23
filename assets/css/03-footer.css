@@ -1,0 +1,52 @@
+#footer{ /* SECTION */
+    margin-top: 3rem;
+    padding: 140px;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    font-family: var(--main-font);
+    position: relative;
+}
+
+#footer_paging{ /* Container of the two buttons */
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    height: 3rem;
+}
+
+.footer_paging{ /* container of each button */
+    border: 1px solid var(--purple);
+    border-color: #c6e0fd;
+    border-radius: 3px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_paging_content{ /* content (arrow + text) of each button */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.7rem;
+    gap: 2px;
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 600
+}
+
+#footer_paging_content-next{
+    color: var(--light);
+    background-color: var(--purple);
+    border-color: var(--purple);
+}
+
+#footer_img{
+    position: absolute;
+    left: -30px;
+    bottom: 10px;
+}
