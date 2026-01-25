@@ -5,3 +5,7 @@
 .stepCheckActive{
     border-color: var(--purple);
 }
+
+.contentActive{
+    display: block;
+}

@@ -1,24 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/01-style.css">
-    <link rel="stylesheet" href="assets/css/02-header.css">
-    <link rel="stylesheet" href="assets/css/03-footer.css">
-    <link rel="stylesheet" href="assets/css/04-actives.css">
+    <link rel="stylesheet" href="assets/css/01-style.css" />
+    <link rel="stylesheet" href="assets/css/02-header.css" />
+    <link rel="stylesheet" href="assets/css/03-footer.css" />
+    <link rel="stylesheet" href="assets/css/04-actives.css" />
+    <link rel="stylesheet" href="" id="content_style_sheet" />
 </head>
 
 <body>
+    <div id="pagina" style="width: 0"></div>
     <div id="document">
         <section id="header">
             <div id="header_top" class="flex-vertical-centered">
                 <h1>Upgrade your Account</h1>
                 <div id="progress">
                     <div class="progress_container">
-                        <span id="progress_label">1 of 5 Completed</span>
+                        <span id="progress_label"></span>
                         <div id="progress_bar" class="flex-vertical-centered">
                             <div id="progress_filler"></div>
                         </div>
@@ -36,19 +38,19 @@
                         <div class="step_check"></div>
                         <div class="step_label">Tax residency</div>
                     </li>
-                    
+
                     <li class="step">
                         <div class="guion"></div>
                         <div class="step_check"></div>
                         <div class="step_label">Identity card</div>
                     </li>
-                    
+
                     <li class="step">
                         <div class="guion"></div>
                         <div class="step_check"></div>
                         <div class="step_label">Investability</div>
                     </li>
-                    
+
                     <li class="step">
                         <div class="guion"></div>
                         <div class="step_check"></div>
@@ -59,24 +61,106 @@
         </section>
 
         <section id="content">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1 class="form-title">Applicant Data</h1>
+                    <p class="form-subtitle">
+                        Please take a salfie with your document so that it's clearly
+                        visible anddoses not cover your face.
+                    </p>
+                </div>
 
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="First and Last Name" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" />
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <input type="tel" placeholder="Phone" />
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Education" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-with-icon">
+                            <i class="info-icon">i</i>
+                            <span style="color: #5f6368; font-size: 0.95rem">Company Name</span>
+                        </div>
+                        <input type="text" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Address Line 1" />
+                    </div>
+
+                    <div class="form-row-three">
+                        <div>
+                            <input type="text" placeholder="City" />
+                        </div>
+                        <div>
+                            <input type="text" placeholder="State/Province/Region" />
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Zip/Postal Code" />
+                        </div>
+                    </div>
+
+                    <div class="form-row-split">
+                        <div>
+                            <div class="label-with-icon">
+                                <i class="info-icon">i</i>
+                                <span style="color: #5f6368; font-size: 0.95rem">Company No.</span>
+                            </div>
+                            <input type="text" />
+                        </div>
+                        <div>
+                            <select>
+                                <option>Country</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="radio-group">
+                        <span class="radio-label">Show country on your profile and badges</span>
+                        <div class="radio-options">
+                            <div class="radio-option">
+                                <input type="radio" id="yes" name="show-country" value="yes" />
+                                <label for="yes">Yes</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="no" name="show-country" value="no" />
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <section id="footer">
-            <div id="footer_img">
-                <img src="assets/img/tax-residency-footer-image" alt="">
+            <div>
+                <img src="" id="footer_img" alt="" />
             </div>
             <div id="footer_paging">
                 <div id="footer_paging-back" class="footer_paging">
                     <div class="footer_paging_content" id="footer_paging_content-back">
-                        <img class="footer_arrow" id="footer_arrow-back" src="assets/icon/arrow_back_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                        <img class="footer_arrow" id="footer_arrow-back"
+                            src="assets/icon/arrow_back_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
                         <span class="footer_text" id="footer_text-back">BACK</span>
                     </div>
                 </div>
                 <div id="footer_paging-next" class="footer_paging">
                     <div class="footer_paging_content" id="footer_paging_content-next">
                         <span class="footer_text" id="footer_text-next">NEXT</span>
-                        <img class="footer_arrow" id="footer_arrow-next" src="assets/icon/arrow_forward_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                        <img class="footer_arrow" id="footer_arrow-next"
+                            src="assets/icon/arrow_forward_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
                     </div>
                 </div>
             </div>
@@ -85,6 +169,8 @@
 
     <script src="./assets/js/01-variables.js"></script>
     <script src="./assets/js/02-script.js"></script>
+    <script src="./assets/js/04-global.js"></script>
+    <script src="./assets/js/05-listeners.js"></script>
 </body>
 
 </html>
