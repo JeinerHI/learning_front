@@ -1,0 +1,7 @@
+.stepActive{
+    color: var(--purple);
+}
+
+.stepCheckActive{
+    border-color: var(--purple);
+}
