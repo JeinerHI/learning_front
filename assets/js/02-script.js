@@ -96,3 +96,44 @@ function contentStyleSheet(pagina) {
             break;
     }
 }
+
+function changeContentVisibility(pagina) {
+    switch (pagina) {
+        case 0:
+            contentArray.forEach(element => {
+                element.style.display = "none";
+            });
+            content1.style.display = "block";
+            break;
+        case 1:
+            contentArray.forEach(element => {
+                element.style.display = "none";
+            });
+            content2.style.display = "block";
+            break;
+        case 2:
+            contentArray.forEach(element => {
+                element.style.display = "none";
+            });
+            content3.style.display = "block";
+            break;
+        case 3:
+            contentArray.forEach(element => {
+                element.style.display = "none";
+            });
+            content4.style.display = "block";
+            break;
+        case 4:
+            contentArray.forEach(element => {
+                element.style.display = "none";
+            });
+            content5.style.display = "block";
+            break;
+    }
+}
+
+function initializePage() {
+    renderHeaderFooter(parseInt(pagina.textContent));
+    contentStyleSheet(parseInt(pagina.textContent));
+    changeContentVisibility(parseInt(pagina.textContent));
+}

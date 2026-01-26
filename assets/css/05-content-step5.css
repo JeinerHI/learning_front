@@ -1,0 +1,238 @@
+#content-step5 form{
+    margin-bottom: 15rem;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+/* Card con radio buttons y checkbox */
+.notification-card {
+    background-color: var(--input);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notification-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-title {
+    color: var(--purple);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.radio-group-inline {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.radio-option-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-custom-small {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.radio-custom-small-inner {
+    width: 10px;
+    height: 10px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+
+input[type="radio"]:checked+.radio-custom-small .radio-custom-small-inner {
+    transform: scale(1);
+}
+
+.radio-label-inline {
+    color: var(--purple);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Checkbox grande */
+.checkbox-large {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--purple);
+    cursor: pointer;
+    appearance: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.checkbox-large:checked {
+    background-color: transparent;
+}
+
+.checkbox-large:checked::after {
+    content: "✓";
+    color: var(--purple);
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+}
+
+/* Card con icono de info */
+.info-card {
+    background-color: var(--input);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.info-icon {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    color: var(--purple);
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+}
+
+.info-text {
+    color: var(--purple);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Card con radio button */
+.radio-card {
+    background-color: var(--input);
+    padding: 18px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.radio-card-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.radio-card-custom-inner {
+    width: 10px;
+    height: 10px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+
+.radio-card input[type="radio"]:checked+.radio-card-custom .radio-card-custom-inner {
+    transform: scale(1);
+}
+
+.radio-card-content {
+    flex: 1;
+}
+
+.radio-card-title {
+    color: var(--purple);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.radio-card-subtitle {
+    color: var(--purple);
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Select dropdown */
+.select-card {
+    background-color: var(--input);
+    padding: 18px 20px;
+}
+
+select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--purple);
+    font-family: var(--main-font);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235756a2' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .form-title {
+        font-size: 2rem;
+    }
+
+    .form-subtitle {
+        font-size: 1rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .notification-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .notification-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

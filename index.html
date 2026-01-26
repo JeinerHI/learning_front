@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div id="pagina" style="width: 0"></div>
+    <div id="pagina" style="display: none;"></div>
     <div id="document">
         <section id="header">
             <div id="header_top" class="flex-vertical-centered">
@@ -61,7 +61,7 @@
         </section>
 
         <section id="content">
-            <div class="form-container">
+            <div class="form-container main-content" id="content-step1" style="display: none;">
                 <div class="form-header">
                     <h1 class="form-title">Applicant Data</h1>
                     <p class="form-subtitle">
@@ -91,7 +91,7 @@
                     <div class="form-group">
                         <div class="label-with-icon">
                             <i class="info-icon">i</i>
-                            <span style="color: #5f6368; font-size: 0.95rem">Company Name</span>
+                            <span>Company Name</span>
                         </div>
                         <input type="text" />
                     </div>
@@ -111,33 +111,321 @@
                             <input type="text" placeholder="Zip/Postal Code" />
                         </div>
                     </div>
+                    <div>
 
-                    <div class="form-row-split">
-                        <div>
-                            <div class="label-with-icon">
-                                <i class="info-icon">i</i>
-                                <span style="color: #5f6368; font-size: 0.95rem">Company No.</span>
-                            </div>
-                            <input type="text" />
+                        <div class="label-with-icon">
+                            <i class="info-icon">i</i>
+                            <span>Company No.</span>
                         </div>
-                        <div>
+                        <div class="form-row-split">
+                            <div>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <select>
+                                    <option>Country</option>
+                                    <option>Spain</option>
+                                    <option>France</option>
+                                    <option>Germany</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="radio-group">
+                            <span class="radio-label">Show country on your profile and badges</span>
+                            <div class="radio-options">
+                                <div class="radio-option">
+                                    <input type="radio" id="yes" name="show-country" value="yes" />
+                                    <label for="yes">Yes</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="no" name="show-country" value="no" />
+                                    <label for="no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-container main-content" id="content-step2" style="display: none;">
+                <div class="form-header">
+                    <h1 class="form-title">Tax Residency</h1>
+                    <p class="form-subtitle">Tell us about your Tax details. This is important for both for us</p>
+                </div>
+
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="select-wrapper">
+                                <div class="select-icon icon-check">✓</div>
+                                <select>
+                                    <option>Occupational Group</option>
+                                    <option>Group 1</option>
+                                    <option>Group 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="select-wrapper">
+                                <div class="select-icon">🏴</div>
+                                <select>
+                                    <option>Nationality</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="select-wrapper">
+                                <div class="select-icon icon-check">✓</div>
+                                <select>
+                                    <option>Other Nationalities</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="select-wrapper">
+                                <div class="select-icon icon-check">✓</div>
+                                <select>
+                                    <option>Other Nationalities</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="select-wrapper">
+                                <div class="select-icon icon-check">✓</div>
+                                <select>
+                                    <option>Tax Identification Number</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-wrapper">
+                                <label class="checkbox-label">Network Activity</label>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upload-section">
+                        <span class="upload-label">Proof your NTN Tax id certificate</span>
+                        <button type="button" class="upload-button">Upload PDF</button>
+                    </div>
+
+                    <div class="checkbox-row">
+                        <div class="checkbox-wrapper">
+                            <label class="checkbox-label">Taxable in the US?</label>
+                            <input type="checkbox" checked>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <label class="checkbox-label">Taxable in the US?</label>
+                            <input type="checkbox">
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <label class="checkbox-label">Taxable in the US?</label>
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-container main-content" id="content-step3" style="display: none;">
+                <div class="form-header">
+                    <h1 class="form-title">Indentity Documents</h1>
+                    <p class="form-subtitle">Please take a salfie with your document so that it's clearly visible
+                        anddoses not cover your face.</p>
+                </div>
+
+                <div class="cards-container">
+                    <div class="upload-card">
+                        <div class="upload-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="upload-title">Upload The Documents</h3>
+                        <p class="upload-description">.jpg or .pdf should be more than 500KB or 300PI</p>
+                    </div>
+
+                    <div class="illustration-card">
+                        <img class="people-illustration" src="assets/img/identity-content-image"
+                            alt="People Illustration">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container main-content" id="content-step4" style="display: none;">
+                <div class="form-header">
+                    <h1 class="form-title">Indentity Documents</h1>
+                    <p class="form-subtitle">Please take a salfie with your document so that it's clearly visible
+                        anddoses not cover your face.</p>
+                </div>
+
+                <form>
+                    <div class="options-grid">
+                        <label class="option-card selected">
+                            <input type="radio" name="document-type" value="option1" checked>
+                            <div class="radio-custom">
+                                <div class="radio-custom-inner"></div>
+                            </div>
+                            <span class="option-label">Investability Quotient Percentile</span>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="document-type" value="option2">
+                            <div class="radio-custom">
+                                <div class="radio-custom-inner"></div>
+                            </div>
+                            <span class="option-label">Investability Quotient Percentile</span>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="document-type" value="option3">
+                            <div class="radio-custom">
+                                <div class="radio-custom-inner"></div>
+                            </div>
+                            <span class="option-label">Investability Quotient Percentile</span>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="document-type" value="option4">
+                            <div class="radio-custom">
+                                <div class="radio-custom-inner"></div>
+                            </div>
+                            <span class="option-label">Investability Quotient Percentile</span>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="document-type" value="option5">
+                            <div class="radio-custom">
+                                <div class="radio-custom-inner"></div>
+                            </div>
+                            <span class="option-label">Investability Quotient Percentile</span>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="document-type" value="option6">
+                            <div class="radio-custom">
+                                <div class="radio-custom-inner"></div>
+                            </div>
+                            <span class="option-label">Investability Quotient Percentile</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-container main-content" id="content-step5" style="display: none;">
+                <div class="form-header">
+                    <h1 class="form-title">Submit Final</h1>
+                    <p class="form-subtitle">Please take a salfie with your document so that it's clearly visible
+                        anddoses not cover your face.</p>
+                </div>
+
+                <form>
+                    <div class="form-row">
+                        <!-- Notification Summary con radio buttons -->
+                        <div class="notification-card">
+                            <div class="notification-left">
+                                <span class="notification-title">Notification Summary</span>
+                                <div class="radio-group-inline">
+                                    <label class="radio-option-inline">
+                                        <input type="radio" name="notification" value="yes1" checked>
+                                        <div class="radio-custom-small">
+                                            <div class="radio-custom-small-inner"></div>
+                                        </div>
+                                        <span class="radio-label-inline">Yes</span>
+                                    </label>
+                                    <label class="radio-option-inline">
+                                        <input type="radio" name="notification" value="yes2">
+                                        <div class="radio-custom-small">
+                                            <div class="radio-custom-small-inner"></div>
+                                        </div>
+                                        <span class="radio-label-inline">Yes</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Network Activity con checkbox -->
+                        <div class="info-card">
+                            <div class="info-left">
+                                <i class="info-icon">i</i>
+                                <span class="info-text">Network Activity</span>
+                            </div>
+                            <input type="checkbox" class="checkbox-large">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <!-- Daily Creative Challenge - Announcements -->
+                        <label class="radio-card">
+                            <input type="radio" name="creative-challenge-1" value="announcements">
+                            <div class="radio-card-custom">
+                                <div class="radio-card-custom-inner"></div>
+                            </div>
+                            <div class="radio-card-content">
+                                <div class="radio-card-title">Daily Creative Challenge</div>
+                                <div class="radio-card-subtitle">Announcements and special offers</div>
+                            </div>
+                        </label>
+
+                        <!-- Daily Creative Challenge - Talent Notifications -->
+                        <label class="radio-card">
+                            <input type="radio" name="creative-challenge-2" value="talent">
+                            <div class="radio-card-custom">
+                                <div class="radio-card-custom-inner"></div>
+                            </div>
+                            <div class="radio-card-content">
+                                <div class="radio-card-title">Daily Creative Challenge</div>
+                                <div class="radio-card-subtitle">Talent Notifications</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <!-- Give Hours dropdown -->
+                        <div class="select-card">
                             <select>
-                                <option>Country</option>
+                                <option>Give Hours</option>
+                                <option>1-2 Hours</option>
+                                <option>3-4 Hours</option>
+                                <option>5+ Hours</option>
+                            </select>
+                        </div>
+
+                        <!-- Talent Notifications dropdown -->
+                        <div class="select-card">
+                            <select>
+                                <option>Talent Notifications</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="radio-group">
-                        <span class="radio-label">Show country on your profile and badges</span>
-                        <div class="radio-options">
-                            <div class="radio-option">
-                                <input type="radio" id="yes" name="show-country" value="yes" />
-                                <label for="yes">Yes</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="no" name="show-country" value="no" />
-                                <label for="no">No</label>
-                            </div>
+                    <div class="form-group form-group-full">
+                        <!-- Support for months dropdown -->
+                        <div class="select-card">
+                            <select>
+                                <option>Support for months</option>
+                                <option>1 month</option>
+                                <option>3 months</option>
+                                <option>6 months</option>
+                                <option>12 months</option>
+                            </select>
                         </div>
                     </div>
                 </form>
