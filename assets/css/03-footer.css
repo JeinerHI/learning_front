@@ -1,11 +1,15 @@
 #footer{ /* SECTION */
-    margin-top: 10rem;
-    padding: 140px;
+    width: 95%;
     padding-bottom: 2rem;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: baseline;
     font-family: var(--main-font);
+    position: relative;
+}
+
+#footer_img_container{
+    width: 70%;
     position: relative;
 }
 
@@ -13,7 +17,7 @@
     width: 25%;
     display: flex;
     justify-content: space-between;
-    gap: 5%;
+    gap: 5px;
     height: 3rem;
 }
 
@@ -21,7 +25,8 @@
     border: 1px solid var(--purple);
     border-color: #c6e0fd;
     border-radius: 3px;
-    width: 45%;
+    width: 10rem;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;

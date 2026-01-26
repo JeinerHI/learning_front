@@ -18,3 +18,6 @@ footerPagingNext.addEventListener('click', () => {
         initializePage();
     }
 });
+
+pagina.textContent=0;
+initializePage();

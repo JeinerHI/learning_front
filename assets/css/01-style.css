@@ -32,11 +32,6 @@
     --dark: #343a40;
     --input: #ddeef9;
     --main-background: #f1f9fe;
-    /* --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px; */
     --main-font: "Jost", sans-serif;
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -59,6 +54,10 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--main-font);
 }
 
+img{
+    width: 100%;
+}
+
 
 
 .flex-vertical-centered{
@@ -73,6 +72,12 @@ h1, h2, h3, h4, h5, h6{
     border-radius: 20px;
     background-color: #f1f9fe;
     box-shadow: 0px 5px 62px 0px rgba(0, 0, 0, 0.19);
+}
+
+
+#content{
+    margin-top: 10vh;
+    margin-bottom: 70vh;
 }
 
 /* COMMON MODIFIERS FORMS */
@@ -108,4 +113,64 @@ h1, h2, h3, h4, h5, h6{
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-bottom: 20px;
+}
+
+.info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.label-with-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+label {
+    display: block;
+    color: var(--purple);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.form-container span{
+    color: var(--purple);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: var(--input);
+    border: none;
+    border-radius: 2px;
+    font-family: var(--main-font);
+    font-size: 1rem;
+    color: var(--gray-dark);
+    transition: background-color 0.2s;
+}
+
+input::placeholder {
+    color: var(--purple);
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235f6368' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    cursor: pointer;
+    color: var(--purple);
 }

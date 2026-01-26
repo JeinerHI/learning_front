@@ -1,86 +1,39 @@
+const Expresiones = {
+    ejercicio1: /^\d+$/,
+    ejercicio2: /^\d{5}$/,
+    ejercicio3: /^[a-z]+$/,
+    ejercicio4: /^[a-z]+[@][a-z]+[\.][a-z]+$/,
+    ejercicio5: /^\d{9,12}$/,
+    ejercicio6: /^\s+$/
+}
+
 const form = document.getElementById("formu");
-const campoNombre = form.querySelector(("#nombre"));
-const campoEmail = form.querySelector(("#email"));
-const campoDni = form.querySelector(("#dni"));
-const btnSubmit = form.querySelector('button[id=submit]');
+const btnSubmit = form.querySelector("#submit");
 
-
-const regExpNombre = /^[A-Za-z]+ [A-Za-z]+$/;
-campoNombre.addEventListener("input", () => {
-    let controladorVacio;
-    let coincide;
-    (campoNombre.value === "") ? controladorVacio = true : controladorVacio = false;
-
-    if (!controladorVacio) {
-        coincide = regExpNombre.test(campoNombre.value);
+const validadorInput = (e) => {
+    if (!(e.target.value === "")) {
+        if ((Expresiones[e.target.id].test(e.target.value))) {
+            e.target.classList.remove("noValidado");
+            e.target.classList.add("validado");
+            e.target.closest(".campo").querySelector(".err_message").textContent = "";
+        } else {
+            e.target.classList.remove("validado");
+            e.target.classList.add("noValidado");
+            e.target.closest(".campo").querySelector(".err_message").textContent = `Ingresa un valor valido para ${e.target.id}`;
+        }
     } else {
-        campoNombre.classList.remove("validado");
-        campoNombre.classList.remove("noValidado");
+        e.target.classList.remove("validado");
+        e.target.classList.remove("noValidado");
+        e.target.closest(".campo").querySelector(".err_message").textContent = "";
         return;
     }
+}
 
-    if (coincide) {
-        campoNombre.classList.add("validado");
-        campoNombre.classList.remove("noValidado");
-    } else {
-        campoNombre.classList.remove("validado");
-        campoNombre.classList.add("noValidado");
+form.addEventListener("input", (e) => {
+    validadorInput(e);
     }
-});
-
-const regExpEmail = /^[a-z]+[@](gmail)[\.](com)$/;
-campoEmail.addEventListener("input", () => {
-    let controladorVacio;
-    let coincide;
-    (campoEmail.value === "") ? controladorVacio = true : controladorVacio = false;
-
-    if (!controladorVacio) {
-        coincide = regExpEmail.test(campoEmail.value);
-    } else {
-        campoEmail.classList.remove("validado");
-        campoEmail.classList.remove("noValidado");
-        return;
-    }
-
-    if (coincide) {
-        campoEmail.classList.add("validado");
-        campoEmail.classList.remove("noValidado");
-    } else {
-        campoEmail.classList.remove("validado");
-        campoEmail.classList.add("noValidado");
-    }
-});
-
-const regExpDni = /^[0-9]{6}[A-Za-z]$/;
-campoDni.addEventListener("input", () => {
-    let controladorVacio;
-    let coincide;
-    (campoDni.value === "") ? controladorVacio = true : controladorVacio = false;
-
-    if (!controladorVacio) {
-        coincide = regExpDni.test(campoDni.value);
-    } else {
-        campoDni.classList.remove("validado");
-        campoDni.classList.remove("noValidado");
-        return;
-    }
-
-    if (coincide) {
-        campoDni.classList.add("validado");
-        campoDni.classList.remove("noValidado");
-    } else {
-        campoDni.classList.remove("validado");
-        campoDni.classList.add("noValidado");
-    }
-});
+);
 
 btnSubmit.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    if (enviar) {
-
-    } else {
-        
-    }
-
+    
 });

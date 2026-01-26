@@ -12,73 +12,12 @@
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    color: var(--purple);
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-    font-weight: 400;
-}
-
-.form-container span{
-    color: var(--purple);
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select {
-    width: 100%;
-    padding: 14px 16px;
-    background-color: var(--input);
-    border: none;
-    border-radius: 4px;
-    font-family: var(--main-font);
-    font-size: 1rem;
-    color: var(--gray-dark);
-    transition: background-color 0.2s;
-}
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 select:focus {
     outline: none;
     background-color: #d0d7de;
-}
-
-input::placeholder {
-    color: var(--purple);
-}
-
-.info-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #a0a0a0;
-    border-radius: 50%;
-    color: #a0a0a0;
-    font-size: 12px;
-    font-weight: bold;
-    margin-right: 8px;
-    font-style: normal;
-}
-
-.label-with-icon {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235f6368' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-    cursor: pointer;
-    color: var(--purple);
 }
 
 .radio-group {
