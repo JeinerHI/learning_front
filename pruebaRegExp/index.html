@@ -4,15 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Retro UI Feedback Form</title>
-  <link rel="stylesheet" media="all" href="style.css" />
+  <!-- <link rel="stylesheet" media="all" href="style.css" /> -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" media="all" href="antiTailwind.css" />
 </head>
 
 <body>
-  <div class="feedback-card">
-    <div class="feedback-header">
+  <div class="feedback-card w-100 mx-auto mt-20 p-6 bg-blue-50 rounded-sm shadow-lg">
+    <div class="feedback-header mx-auto w-fit my-4 font-display">
       SEND FEEDBACK
     </div>
-    <form class="feedback-body" id="formu">
+    <form class="feedback-body bg-slate-50 rounded-sm p-8" id="formu">
       <div class="campo">
         <label for="">Ejercicio1</label>
         <input type="text" placeholder="Solo numeros" class="pruebas" id="ejercicio1">
