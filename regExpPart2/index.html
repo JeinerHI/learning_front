@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Contacto</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+        <h1 class="text-2xl font-bold text-gray-800 mb-1 text-center">
+            Contacto
+        </h1>
+        <p class="text-gray-400 text-sm text-center mb-6">
+            Llena los campos y envía tu mensaje
+        </p>
+
+        <form id="formulario">
+            <!-- Nombre del cliente -->
+            <div class="mb-4">
+                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre del cliente</label>
+                <input type="text" id="nombre" name="nombre"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" />
+            </div>
+
+            <!-- Teléfono -->
+            <div class="mb-4">
+                <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" />
+            </div>
+
+            <!-- Email -->
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email" id="email" name="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" />
+            </div>
+
+            <!-- Localidad -->
+            <div class="mb-4">
+                <label for="localidad" class="block text-sm font-medium text-gray-700 mb-1">Localidad</label>
+                <input type="text" id="localidad" name="localidad"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" />
+            </div>
+
+            <!-- Mensaje -->
+            <div class="mb-6">
+                <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"></textarea>
+            </div>
+
+            <!-- Botón de envío -->
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+                Enviar
+            </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
