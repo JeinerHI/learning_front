@@ -46,7 +46,7 @@ input[type="radio"] {
     width: 18px;
     height: 18px;
     cursor: pointer;
-    accent-color: var(--purple);
+    accent-color: var(--main-color);
 }
 
 .radio-option label {

@@ -14,6 +14,14 @@
 
 <body>
     <div id="pagina" style="display: none;"></div>
+    <div id="palette_changer" class="flex-vertical-centered">
+        <div id="palette_icon" class="flex-vertical-centered"><img id="palette_icon_img" src="assets/img/pallette_icon.png" alt=""></div>
+        <div class="color_options">
+            <div class="color_option" id="palette1">&nbsp;</div>
+            <div class="color_option" id="palette2">&nbsp;</div>
+            <div class="color_option" id="palette3">&nbsp;</div>
+        </div>
+    </div>
     <div id="document">
         <section id="header">
             <div id="header_top" class="flex-vertical-centered">
@@ -439,17 +447,15 @@
             </div>
             <div id="footer_paging">
                 <div id="footer_paging-back" class="footer_paging">
-                    <div class="footer_paging_content" id="footer_paging_content-back">
-                        <img class="footer_arrow" id="footer_arrow-back"
-                            src="assets/icon/arrow_back_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
-                        <span class="footer_text" id="footer_text-back">BACK</span>
+                    <div class="footer_arrow" id="footer_arrow-back">
+                        <img src="assets/icon/arrow_back_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
                     </div>
+                    <span class="footer_text" id="footer_text-back">BACK</span>
                 </div>
                 <div id="footer_paging-next" class="footer_paging">
-                    <div class="footer_paging_content" id="footer_paging_content-next">
-                        <span class="footer_text" id="footer_text-next">NEXT</span>
-                        <img class="footer_arrow" id="footer_arrow-next"
-                            src="assets/icon/arrow_forward_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+                    <span class="footer_text" id="footer_text-next">NEXT</span>
+                    <div class="footer_arrow" id="footer_arrow-next">
+                        <img src="assets/icon/arrow_forward_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
                     </div>
                 </div>
             </div>

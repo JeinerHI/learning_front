@@ -1,3 +1,6 @@
+/* Initial variables */
+const paletteChanger = document.getElementById('palette_changer');
+
 /* Variables for the header */
 const header = document.getElementById('header');
 const steps = header.querySelectorAll('.step');

@@ -9,53 +9,55 @@
 }
 
 #footer_img_container{
-    width: 70%;
-    position: relative;
+    width: 65%;
+    position: absolute;
+    left: -30px;
+    bottom: 10px;
 }
 
 #footer_paging{ /* Container of the two buttons */
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
     width: 25%;
     display: flex;
     justify-content: space-between;
     gap: 5px;
-    height: 3rem;
 }
 
 .footer_paging{ /* container of each button */
-    border: 1px solid var(--purple);
+    border: 1px solid;
     border-color: #c6e0fd;
     border-radius: 3px;
-    width: 10rem;
+    width: 35%;
     height: 5rem;
+    padding-inline: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .footer_paging:hover{
     cursor: pointer;
 }
 
-.footer_paging_content{ /* content (arrow + text) of each button */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0.7rem;
-    gap: 2px;
-    color: var(--secondary);
-    font-size: 16px;
-    font-weight: 600
+#footer_paging-next{
+    background-color: var(--main-color);
+    color: white;
+    border: none;
 }
 
-#footer_paging_content-next{
-    color: var(--light);
-    background-color: var(--purple);
-    border-color: var(--purple);
-}
+@media (max-width: 600px){
+    #footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-inline: auto;
+    }
 
-#footer_img{
-    position: absolute;
-    left: -30px;
-    bottom: 10px;
+    #footer_img_container,
+    #footer_paging{
+        position: static;
+        width: 100%;
+    }
 }

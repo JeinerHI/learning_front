@@ -38,6 +38,7 @@
     --size-title-big: 2.8rem;
     --size-title-small: 1.8rem;
     --size-title-medium: 2.5vw;
+    --main-color: var(--purple);
 }
 
 body {
@@ -58,8 +59,6 @@ img{
     width: 100%;
 }
 
-
-
 .flex-vertical-centered{
     display: flex;
     align-items: center;
@@ -74,10 +73,53 @@ img{
     box-shadow: 0px 5px 62px 0px rgba(0, 0, 0, 0.19);
 }
 
-
 #content{
     margin-top: 10vh;
     margin-bottom: 70vh;
+}
+
+/** ================================== */
+/* *PAlETTE CHANGER */
+/** ================================== */
+
+#palette_changer{
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    width: 5rem;
+    gap: 2px;
+    cursor: pointer;
+}
+
+#palette_icon{
+    width: 30%;
+}
+
+.color_options{
+    width: 50%;
+    display: none;
+}
+
+.color_option{
+    width: 30%;
+    border-radius: 2px;
+    border: 1px solid var(--secondary);
+}
+
+#palette1{
+    background-color: var(--purple);
+}
+
+#palette2{
+    background-color: var(--orange);
+}
+
+#palette3{
+    background-color: var(--green);
+}
+
+.pallette-active{
+    display: flex;
 }
 
 /* COMMON MODIFIERS FORMS */
@@ -92,14 +134,14 @@ img{
 }
 
 .form-title {
-    color: var(--purple);
+    color: var(--main-color);
     font-size: clamp(var(--size-title-small),var(--size-title-medium),var(--size-title-big));
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .form-subtitle {
-    color: var(--purple);
+    color: var(--main-color);
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -137,14 +179,14 @@ img{
 
 label {
     display: block;
-    color: var(--purple);
+    color: var(--main-color);
     font-size: 0.95rem;
     margin-bottom: 8px;
     font-weight: 400;
 }
 
 .form-container span{
-    color: var(--purple);
+    color: var(--main-color);
 }
 
 input[type="text"],
@@ -163,7 +205,7 @@ select {
 }
 
 input::placeholder {
-    color: var(--purple);
+    color: var(--main-color);
 }
 
 select {
@@ -172,5 +214,12 @@ select {
     background-repeat: no-repeat;
     background-position: right 1rem center;
     cursor: pointer;
-    color: var(--purple);
+    color: var(--main-color);
+}
+
+
+@media (max-width: 600px){
+    #content{
+        margin-bottom: 0;
+    }
 }

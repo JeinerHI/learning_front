@@ -1,9 +1,9 @@
 .stepActive{
-    color: var(--purple);
+    color: var(--main-color);
 }
 
 .stepCheckActive{
-    border-color: var(--purple);
+    border-color: var(--main-color);
 }
 
 .contentActive{
