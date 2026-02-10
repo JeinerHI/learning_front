@@ -136,4 +136,5 @@ function initializePage() {
     renderHeaderFooter(parseInt(pagina.textContent));
     contentStyleSheet(parseInt(pagina.textContent));
     changeContentVisibility(parseInt(pagina.textContent));
+    if(localStorage.getItem("palette")){document.documentElement.style.setProperty('--main-color', 'var(--'+ localStorage.getItem("palette") +')');}
 }

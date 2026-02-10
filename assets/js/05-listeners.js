@@ -8,15 +8,15 @@ paletteChanger.addEventListener('click', (e) => {
             break;
         case 'palette1':
             localStorage.setItem('palette', 'palette1');
-            document.documentElement.style.setProperty('--main-color', 'var(--purple)');
+            document.documentElement.style.setProperty('--main-color', 'var(--palette1)');
             break;
         case 'palette2':
             localStorage.setItem('palette', 'palette2');
-            document.documentElement.style.setProperty('--main-color', 'var(--orange)');
+            document.documentElement.style.setProperty('--main-color', 'var(--palette2)');
             break;
         case 'palette3':
             localStorage.setItem('palette', 'palette3');
-            document.documentElement.style.setProperty('--main-color', 'var(--green)');
+            document.documentElement.style.setProperty('--main-color', 'var(--palette3)');
             break;
     }
 
